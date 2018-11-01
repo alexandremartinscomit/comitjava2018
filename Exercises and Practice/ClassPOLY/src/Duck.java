@@ -4,9 +4,20 @@ public class Duck extends Animal {
 
     private final String name;
 
-    public Duck(String name){
-        this.name = name;
+    private final int age;
 
+    public Duck(String name, int age){
+        this.name = name;
+        this.age = age;
+    }
+
+    public int getAge(){
+        return age;
+    }
+
+
+    public String getName(){
+        return name;
     }
 
     @Override
