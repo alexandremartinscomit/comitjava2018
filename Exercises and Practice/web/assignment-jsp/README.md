@@ -1,13 +1,14 @@
 # JSP Assignment
 
-Task 1) Create a funciontal feature for User (CRUD) based on the Car feature
-	1.1 List and Form Screen
-	1.2 Repository, Service and View
-	1.3 Servlet Controller for User
-	1.4 Business Rules
-		1.4.1 Check is the email is duplicated
-		1.4.2 The password should be stored encrypted (Use the code bellow as base)
-		1.4.3 Fields for USER: id, email, password and type(ADMIN, CUSTOMER)
+## Task 1) Create a funciontal feature for User (CRUD) based on the Car feature
+	
+### 1.1 List and Form Screen
+### 1.2 Repository, Service and View
+### 1.3 Servlet Controller for User
+### 1.4 Business Rules
+#### 1.4.1 Check is the email is duplicated
+#### 1.4.2 The password should be stored encrypted (Use the code bellow as base)
+#### 1.4.3 Fields for USER: id, email, password and type(ADMIN, CUSTOMER)
 
 	1.5 Deadline: 18/11, please send to my email.
 
@@ -85,4 +86,4 @@ public class ProtectedConfigFile {
     private static byte[] base64Decode(String property) throws IOException {
         return Base64.getDecoder().decode(property);
     }
-}```
+}
