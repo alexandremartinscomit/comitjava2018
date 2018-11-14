@@ -6,7 +6,7 @@
 ### 1.2 Repository, Service and View
 ### 1.3 Servlet Controller for User
 ### 1.4 Business Rules
-#### 1.4.1 Check is the email is duplicated
+#### 1.4.1 Check if the email is duplicated
 #### 1.4.2 The password should be stored encrypted (Use the code bellow as base)
 #### 1.4.3 Fields for USER: id, email, password and type(ADMIN, CUSTOMER)
 
