@@ -1,0 +1,710 @@
+2018-12-06 15:50:28 INFO  log:192 - Logging initialized @506ms to org.eclipse.jetty.util.log.Slf4jLog
+2018-12-06 15:50:28 INFO  Runner:235 - Runner
+2018-12-06 15:50:28 INFO  Server:372 - jetty-9.4.6.v20170531
+2018-12-06 15:50:30 INFO  AnnotationConfiguration:480 - Scanning elapsed time=1579ms
+2018-12-06 15:50:31 INFO  session:364 - DefaultSessionIdManager workerName=node0
+2018-12-06 15:50:31 INFO  session:369 - No SessionScavenger set, using defaults
+2018-12-06 15:50:31 INFO  session:149 - Scavenging every 600000ms
+2018-12-06 15:50:31 INFO  ContextHandler:788 - Started o.e.j.w.WebAppContext@3567135c{/rentsystem,file:///home/alexandre/skip/rentsystem/src/main/webapp/,AVAILABLE}{file:///home/alexandre/skip/rentsystem/src/main/webapp/}
+2018-12-06 15:50:31 INFO  AbstractConnector:280 - Started ServerConnector@68ceda24{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2018-12-06 15:50:31 INFO  Server:444 - Started @3569ms
+2018-12-06 15:50:40 ERROR BaseController:35 - c6212dce-5448-48d2-ae7d-e9e7aeba3375 - text
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1775)
+	at view.RentOrderServletController.updateRentOrder(RentOrderServletController.java:162)
+	at view.RentOrderServletController.doGet(RentOrderServletController.java:63)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:841)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+	at view.SecurityFilter.doFilter(SecurityFilter.java:25)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1629)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:190)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1595)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1564)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:219)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:126)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+	at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:126)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:673)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:591)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-06 15:50:40 WARN  HttpChannel:517 - /rentsystem/rentOrder/update
+javax.servlet.ServletException: javax.servlet.ServletException: java.lang.IllegalStateException: Committed
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+	at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:126)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:673)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:591)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.servlet.ServletException: java.lang.IllegalStateException: Committed
+	at view.RentOrderServletController.doGet(RentOrderServletController.java:72)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:841)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+	at view.SecurityFilter.doFilter(SecurityFilter.java:25)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1629)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:190)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1595)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1564)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:219)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:126)
+	... 14 more
+Caused by: java.lang.IllegalStateException: Committed
+	at org.eclipse.jetty.server.HttpChannel.resetBuffer(HttpChannel.java:775)
+	at org.eclipse.jetty.server.HttpOutput.resetBuffer(HttpOutput.java:928)
+	at org.eclipse.jetty.server.Response.resetBuffer(Response.java:1312)
+	at org.eclipse.jetty.server.Response.resetForForward(Response.java:1305)
+	at org.eclipse.jetty.server.Dispatcher.forward(Dispatcher.java:141)
+	at org.eclipse.jetty.server.Dispatcher.forward(Dispatcher.java:73)
+	at view.RentOrderServletController.updateRentOrder(RentOrderServletController.java:178)
+	at view.RentOrderServletController.doGet(RentOrderServletController.java:63)
+	... 36 more
+2018-12-06 15:50:41 WARN  HttpChannel:517 - /rentsystem/rentOrder/css/style.css
+javax.servlet.ServletException: javax.servlet.ServletException: java.lang.IllegalStateException: Committed
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+	at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:199)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:673)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:591)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.servlet.ServletException: java.lang.IllegalStateException: Committed
+	at view.RentOrderServletController.doGet(RentOrderServletController.java:72)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:841)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+	at view.SecurityFilter.doFilter(SecurityFilter.java:25)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1629)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:190)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1595)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1564)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:219)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:126)
+	... 14 more
+Caused by: java.lang.IllegalStateException: Committed
+	at org.eclipse.jetty.server.HttpChannel.resetBuffer(HttpChannel.java:775)
+	at org.eclipse.jetty.server.HttpOutput.resetBuffer(HttpOutput.java:928)
+	at org.eclipse.jetty.server.Response.resetBuffer(Response.java:1312)
+	at org.eclipse.jetty.server.Response.resetForForward(Response.java:1305)
+	at org.eclipse.jetty.server.Dispatcher.forward(Dispatcher.java:141)
+	at org.eclipse.jetty.server.Dispatcher.forward(Dispatcher.java:73)
+	at view.RentOrderServletController.listRentOrder(RentOrderServletController.java:91)
+	at view.RentOrderServletController.doGet(RentOrderServletController.java:66)
+	... 36 more
+2018-12-06 15:51:14 ERROR BaseRepository:67 - Error during the rent order update
+java.sql.SQLIntegrityConstraintViolationException: Column 'car_id' cannot be null
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:115)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:960)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1116)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1066)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1396)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1051)
+	at repository.RentOrderRepository.modify(RentOrderRepository.java:63)
+	at repository.RentOrderRepository.modify(RentOrderRepository.java:13)
+	at service.RentOrderService.modify(RentOrderService.java:42)
+	at service.RentOrderService.modify(RentOrderService.java:11)
+	at view.RentOrderServletController.updateRentOrder(RentOrderServletController.java:170)
+	at view.RentOrderServletController.doGet(RentOrderServletController.java:63)
+	at view.RentOrderServletController.doPost(RentOrderServletController.java:41)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:841)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+	at view.SecurityFilter.doFilter(SecurityFilter.java:25)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1629)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:190)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1595)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1564)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:219)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:126)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+	at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:199)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:673)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:591)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-06 15:51:14 ERROR BaseController:31 - 42b00cc7-96a1-4eca-b826-0f4a93c20dfe - Error during the rent order update
+exception.InfrastructureException: Error during the rent order update
+	at repository.RentOrderRepository.modify(RentOrderRepository.java:68)
+	at repository.RentOrderRepository.modify(RentOrderRepository.java:13)
+	at service.RentOrderService.modify(RentOrderService.java:42)
+	at service.RentOrderService.modify(RentOrderService.java:11)
+	at view.RentOrderServletController.updateRentOrder(RentOrderServletController.java:170)
+	at view.RentOrderServletController.doGet(RentOrderServletController.java:63)
+	at view.RentOrderServletController.doPost(RentOrderServletController.java:41)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:841)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+	at view.SecurityFilter.doFilter(SecurityFilter.java:25)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1629)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:190)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1595)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1564)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:219)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:126)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+	at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:199)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:673)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:591)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'car_id' cannot be null
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:115)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:960)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1116)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1066)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1396)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1051)
+	at repository.RentOrderRepository.modify(RentOrderRepository.java:63)
+	... 42 more
+2018-12-06 15:54:56 INFO  log:192 - Logging initialized @618ms to org.eclipse.jetty.util.log.Slf4jLog
+2018-12-06 15:54:56 INFO  Runner:235 - Runner
+2018-12-06 15:54:57 INFO  Server:372 - jetty-9.4.6.v20170531
+2018-12-06 15:55:00 INFO  AnnotationConfiguration:480 - Scanning elapsed time=2110ms
+2018-12-06 15:55:00 INFO  session:364 - DefaultSessionIdManager workerName=node0
+2018-12-06 15:55:00 INFO  session:369 - No SessionScavenger set, using defaults
+2018-12-06 15:55:00 INFO  session:149 - Scavenging every 600000ms
+2018-12-06 15:55:00 INFO  ContextHandler:788 - Started o.e.j.w.WebAppContext@3567135c{/rentsystem,file:///home/alexandre/skip/rentsystem/src/main/webapp/,AVAILABLE}{file:///home/alexandre/skip/rentsystem/src/main/webapp/}
+2018-12-06 15:55:00 INFO  AbstractConnector:280 - Started ServerConnector@68ceda24{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2018-12-06 15:55:00 INFO  Server:444 - Started @4638ms
+2018-12-06 15:57:19 INFO  log:192 - Logging initialized @440ms to org.eclipse.jetty.util.log.Slf4jLog
+2018-12-06 15:57:19 INFO  Runner:235 - Runner
+2018-12-06 15:57:19 INFO  Server:372 - jetty-9.4.6.v20170531
+2018-12-06 15:57:21 INFO  AnnotationConfiguration:480 - Scanning elapsed time=1491ms
+2018-12-06 15:57:22 INFO  session:364 - DefaultSessionIdManager workerName=node0
+2018-12-06 15:57:22 INFO  session:369 - No SessionScavenger set, using defaults
+2018-12-06 15:57:22 INFO  session:149 - Scavenging every 600000ms
+2018-12-06 15:57:22 INFO  ContextHandler:788 - Started o.e.j.w.WebAppContext@3567135c{/rentsystem,file:///home/alexandre/skip/rentsystem/src/main/webapp/,AVAILABLE}{file:///home/alexandre/skip/rentsystem/src/main/webapp/}
+2018-12-06 15:57:22 INFO  AbstractConnector:280 - Started ServerConnector@5e2359a3{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2018-12-06 15:57:22 INFO  Server:444 - Started @3165ms
+2018-12-06 15:57:45 ERROR BaseController:35 - c5e91577-9969-42b7-b6d3-c8209c153735 - text
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1775)
+	at view.RentOrderServletController.updateRentOrder(RentOrderServletController.java:162)
+	at view.RentOrderServletController.doGet(RentOrderServletController.java:63)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:841)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+	at view.SecurityFilter.doFilter(SecurityFilter.java:25)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1629)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:190)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1595)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1564)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:219)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:126)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+	at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:126)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:673)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:591)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-06 15:57:45 WARN  HttpChannel:517 - /rentsystem/rentOrder/update
+javax.servlet.ServletException: javax.servlet.ServletException: java.lang.IllegalStateException: Committed
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+	at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:126)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:673)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:591)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.servlet.ServletException: java.lang.IllegalStateException: Committed
+	at view.RentOrderServletController.doGet(RentOrderServletController.java:72)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:841)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+	at view.SecurityFilter.doFilter(SecurityFilter.java:25)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1629)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:190)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1595)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1564)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:219)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:126)
+	... 14 more
+Caused by: java.lang.IllegalStateException: Committed
+	at org.eclipse.jetty.server.HttpChannel.resetBuffer(HttpChannel.java:775)
+	at org.eclipse.jetty.server.HttpOutput.resetBuffer(HttpOutput.java:928)
+	at org.eclipse.jetty.server.Response.resetBuffer(Response.java:1312)
+	at org.eclipse.jetty.server.Response.resetForForward(Response.java:1305)
+	at org.eclipse.jetty.server.Dispatcher.forward(Dispatcher.java:141)
+	at org.eclipse.jetty.server.Dispatcher.forward(Dispatcher.java:73)
+	at view.RentOrderServletController.updateRentOrder(RentOrderServletController.java:178)
+	at view.RentOrderServletController.doGet(RentOrderServletController.java:63)
+	... 36 more
+2018-12-06 15:57:46 WARN  HttpChannel:517 - /rentsystem/rentOrder/css/style.css
+javax.servlet.ServletException: javax.servlet.ServletException: java.lang.IllegalStateException: Committed
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+	at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:126)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:673)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:591)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.servlet.ServletException: java.lang.IllegalStateException: Committed
+	at view.RentOrderServletController.doGet(RentOrderServletController.java:72)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:841)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+	at view.SecurityFilter.doFilter(SecurityFilter.java:25)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1629)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:190)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1595)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1564)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:219)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:126)
+	... 14 more
+Caused by: java.lang.IllegalStateException: Committed
+	at org.eclipse.jetty.server.HttpChannel.resetBuffer(HttpChannel.java:775)
+	at org.eclipse.jetty.server.HttpOutput.resetBuffer(HttpOutput.java:928)
+	at org.eclipse.jetty.server.Response.resetBuffer(Response.java:1312)
+	at org.eclipse.jetty.server.Response.resetForForward(Response.java:1305)
+	at org.eclipse.jetty.server.Dispatcher.forward(Dispatcher.java:141)
+	at org.eclipse.jetty.server.Dispatcher.forward(Dispatcher.java:73)
+	at view.RentOrderServletController.listRentOrder(RentOrderServletController.java:91)
+	at view.RentOrderServletController.doGet(RentOrderServletController.java:66)
+	... 36 more
+2018-12-06 15:59:56 ERROR BaseController:35 - 5cb6788b-f834-48e1-ae87-0982632acf11 - text
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1775)
+	at view.RentOrderServletController.updateRentOrder(RentOrderServletController.java:162)
+	at view.RentOrderServletController.doGet(RentOrderServletController.java:63)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:841)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+	at view.SecurityFilter.doFilter(SecurityFilter.java:25)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1629)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:190)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1595)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1564)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:219)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:126)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+	at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:199)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:673)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:591)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-06 16:02:54 INFO  log:192 - Logging initialized @444ms to org.eclipse.jetty.util.log.Slf4jLog
+2018-12-06 16:02:54 INFO  Runner:235 - Runner
+2018-12-06 16:02:54 INFO  Server:372 - jetty-9.4.6.v20170531
+2018-12-06 16:02:56 INFO  AnnotationConfiguration:480 - Scanning elapsed time=1452ms
+2018-12-06 16:02:56 INFO  session:364 - DefaultSessionIdManager workerName=node0
+2018-12-06 16:02:56 INFO  session:369 - No SessionScavenger set, using defaults
+2018-12-06 16:02:56 INFO  session:149 - Scavenging every 660000ms
+2018-12-06 16:02:57 INFO  ContextHandler:788 - Started o.e.j.w.WebAppContext@3567135c{/rentsystem,file:///home/alexandre/skip/rentsystem/src/main/webapp/,AVAILABLE}{file:///home/alexandre/skip/rentsystem/src/main/webapp/}
+2018-12-06 16:02:57 INFO  AbstractConnector:280 - Started ServerConnector@68ceda24{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2018-12-06 16:02:57 INFO  Server:444 - Started @3185ms
+2018-12-06 16:06:38 INFO  log:192 - Logging initialized @460ms to org.eclipse.jetty.util.log.Slf4jLog
+2018-12-06 16:06:38 INFO  Runner:235 - Runner
+2018-12-06 16:06:38 INFO  Server:372 - jetty-9.4.6.v20170531
+2018-12-06 16:06:42 INFO  AnnotationConfiguration:480 - Scanning elapsed time=2668ms
+2018-12-06 16:06:42 INFO  session:364 - DefaultSessionIdManager workerName=node0
+2018-12-06 16:06:42 INFO  session:369 - No SessionScavenger set, using defaults
+2018-12-06 16:06:42 INFO  session:149 - Scavenging every 660000ms
+2018-12-06 16:06:42 INFO  ContextHandler:788 - Started o.e.j.w.WebAppContext@3567135c{/rentsystem,file:///home/alexandre/skip/rentsystem/src/main/webapp/,AVAILABLE}{file:///home/alexandre/skip/rentsystem/src/main/webapp/}
+2018-12-06 16:06:42 INFO  AbstractConnector:280 - Started ServerConnector@68ceda24{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2018-12-06 16:06:42 INFO  Server:444 - Started @4638ms
+2018-12-06 16:09:55 INFO  log:192 - Logging initialized @540ms to org.eclipse.jetty.util.log.Slf4jLog
+2018-12-06 16:09:55 INFO  Runner:235 - Runner
+2018-12-06 16:09:56 INFO  Server:372 - jetty-9.4.6.v20170531
+2018-12-06 16:09:58 INFO  AnnotationConfiguration:480 - Scanning elapsed time=1694ms
+2018-12-06 16:09:58 INFO  session:364 - DefaultSessionIdManager workerName=node0
+2018-12-06 16:09:58 INFO  session:369 - No SessionScavenger set, using defaults
+2018-12-06 16:09:58 INFO  session:149 - Scavenging every 600000ms
+2018-12-06 16:09:58 INFO  ContextHandler:788 - Started o.e.j.w.WebAppContext@3567135c{/rentsystem,file:///home/alexandre/skip/rentsystem/src/main/webapp/,AVAILABLE}{file:///home/alexandre/skip/rentsystem/src/main/webapp/}
+2018-12-06 16:09:58 INFO  AbstractConnector:280 - Started ServerConnector@68ceda24{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2018-12-06 16:09:58 INFO  Server:444 - Started @3914ms
+2018-12-06 16:10:46 INFO  log:192 - Logging initialized @445ms to org.eclipse.jetty.util.log.Slf4jLog
+2018-12-06 16:10:46 INFO  Runner:235 - Runner
+2018-12-06 16:10:47 INFO  Server:372 - jetty-9.4.6.v20170531
+2018-12-06 16:10:49 INFO  AnnotationConfiguration:480 - Scanning elapsed time=1947ms
+2018-12-06 16:10:50 INFO  session:364 - DefaultSessionIdManager workerName=node0
+2018-12-06 16:10:50 INFO  session:369 - No SessionScavenger set, using defaults
+2018-12-06 16:10:50 INFO  session:149 - Scavenging every 600000ms
+2018-12-06 16:10:50 INFO  ContextHandler:788 - Started o.e.j.w.WebAppContext@3567135c{/rentsystem,file:///home/alexandre/skip/rentsystem/src/main/webapp/,AVAILABLE}{file:///home/alexandre/skip/rentsystem/src/main/webapp/}
+2018-12-06 16:10:50 INFO  AbstractConnector:280 - Started ServerConnector@68ceda24{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2018-12-06 16:10:50 INFO  Server:444 - Started @4163ms
+2018-12-06 16:11:03 ERROR BaseController:27 - The user doesn't exist
+exception.EntityNotFoundException: The user doesn't exist
+	at service.UserService.lambda$findByEmail$2(UserService.java:73)
+	at java.util.Optional.orElseThrow(Optional.java:290)
+	at service.UserService.findByEmail(UserService.java:73)
+	at view.LoginController.doGet(LoginController.java:32)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:841)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+	at view.SecurityFilter.doFilter(SecurityFilter.java:26)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1629)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:190)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1595)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1564)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:219)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:126)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+	at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:126)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:673)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:591)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-06 16:18:25 INFO  log:192 - Logging initialized @557ms to org.eclipse.jetty.util.log.Slf4jLog
+2018-12-06 16:18:25 INFO  Runner:235 - Runner
+2018-12-06 16:18:26 INFO  Server:372 - jetty-9.4.6.v20170531
+2018-12-06 16:18:28 INFO  AnnotationConfiguration:480 - Scanning elapsed time=2072ms
+2018-12-06 16:18:28 INFO  session:364 - DefaultSessionIdManager workerName=node0
+2018-12-06 16:18:28 INFO  session:369 - No SessionScavenger set, using defaults
+2018-12-06 16:18:28 INFO  session:149 - Scavenging every 600000ms
+2018-12-06 16:18:29 INFO  ContextHandler:788 - Started o.e.j.w.WebAppContext@3567135c{/rentsystem,file:///home/alexandre/skip/rentsystem/src/main/webapp/,AVAILABLE}{file:///home/alexandre/skip/rentsystem/src/main/webapp/}
+2018-12-06 16:18:29 INFO  AbstractConnector:280 - Started ServerConnector@68ceda24{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2018-12-06 16:18:29 INFO  Server:444 - Started @4126ms
+2018-12-06 16:19:49 ERROR BaseController:35 - fe01fd33-51d6-4c7a-847a-7d6ff5082df0 - Name is null
+java.lang.NullPointerException: Name is null
+	at java.lang.Enum.valueOf(Enum.java:236)
+	at domain.User$UserType.valueOf(User.java:41)
+	at view.UserServletController.updateUser(UserServletController.java:150)
+	at view.UserServletController.doPost(UserServletController.java:54)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:841)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+	at view.SecurityFilter.doFilter(SecurityFilter.java:26)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1629)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:190)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1595)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1564)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:219)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:126)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+	at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:199)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:673)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:591)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-06 16:20:37 ERROR BaseController:35 - c2148239-b82d-44bd-a6b8-814f21e33e0e - Name is null
+java.lang.NullPointerException: Name is null
+	at java.lang.Enum.valueOf(Enum.java:236)
+	at domain.CarType.valueOf(CarType.java:3)
+	at view.CarServletController.updateCar(CarServletController.java:147)
+	at view.CarServletController.doGet(CarServletController.java:50)
+	at view.CarServletController.doPost(CarServletController.java:28)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:841)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+	at view.SecurityFilter.doFilter(SecurityFilter.java:26)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1629)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:190)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1595)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1564)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:219)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:126)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+	at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:199)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:673)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:591)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-06 16:31:15 INFO  log:192 - Logging initialized @573ms to org.eclipse.jetty.util.log.Slf4jLog
+2018-12-06 16:31:15 INFO  Runner:235 - Runner
+2018-12-06 16:31:16 INFO  Server:372 - jetty-9.4.6.v20170531
+2018-12-06 16:31:18 INFO  AnnotationConfiguration:480 - Scanning elapsed time=1833ms
+2018-12-06 16:31:19 INFO  session:364 - DefaultSessionIdManager workerName=node0
+2018-12-06 16:31:19 INFO  session:369 - No SessionScavenger set, using defaults
+2018-12-06 16:31:19 INFO  session:149 - Scavenging every 600000ms
+2018-12-06 16:31:19 INFO  ContextHandler:788 - Started o.e.j.w.WebAppContext@3567135c{/rentsystem,file:///home/alexandre/skip/rentsystem/src/main/webapp/,AVAILABLE}{file:///home/alexandre/skip/rentsystem/src/main/webapp/}
+2018-12-06 16:31:19 INFO  AbstractConnector:280 - Started ServerConnector@68ceda24{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2018-12-06 16:31:19 INFO  Server:444 - Started @3960ms
+2018-12-06 16:36:53 INFO  log:192 - Logging initialized @924ms to org.eclipse.jetty.util.log.Slf4jLog
+2018-12-06 16:36:53 INFO  Runner:235 - Runner
+2018-12-06 16:36:54 INFO  Server:372 - jetty-9.4.6.v20170531
+2018-12-06 16:36:58 INFO  AnnotationConfiguration:480 - Scanning elapsed time=3034ms
+2018-12-06 16:36:59 INFO  session:364 - DefaultSessionIdManager workerName=node0
+2018-12-06 16:36:59 INFO  session:369 - No SessionScavenger set, using defaults
+2018-12-06 16:36:59 INFO  session:149 - Scavenging every 600000ms
+2018-12-06 16:36:59 INFO  ContextHandler:788 - Started o.e.j.w.WebAppContext@3567135c{/rentsystem,file:///home/alexandre/skip/rentsystem/src/main/webapp/,AVAILABLE}{file:///home/alexandre/skip/rentsystem/src/main/webapp/}
+2018-12-06 16:36:59 INFO  AbstractConnector:280 - Started ServerConnector@70742d4a{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2018-12-06 16:36:59 INFO  Server:444 - Started @6381ms
+2018-12-06 17:11:59 INFO  log:192 - Logging initialized @3511ms to org.eclipse.jetty.util.log.Slf4jLog
+2018-12-06 17:11:59 INFO  Runner:235 - Runner
+2018-12-06 17:12:01 INFO  Server:372 - jetty-9.4.6.v20170531
+2018-12-06 17:12:05 INFO  AnnotationConfiguration:480 - Scanning elapsed time=1726ms
+2018-12-06 17:12:06 INFO  session:364 - DefaultSessionIdManager workerName=node0
+2018-12-06 17:12:06 INFO  session:369 - No SessionScavenger set, using defaults
+2018-12-06 17:12:06 INFO  session:149 - Scavenging every 600000ms
+2018-12-06 17:12:06 INFO  ContextHandler:788 - Started o.e.j.w.WebAppContext@3567135c{/rentsystem,file:///home/alexandre/skip/rentsystem/src/main/webapp/,AVAILABLE}{file:///home/alexandre/skip/rentsystem/src/main/webapp/}
+2018-12-06 17:12:06 INFO  AbstractConnector:280 - Started ServerConnector@68ceda24{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2018-12-06 17:12:06 INFO  Server:444 - Started @10830ms
+2018-12-06 17:23:41 INFO  log:192 - Logging initialized @519ms to org.eclipse.jetty.util.log.Slf4jLog
+2018-12-06 17:23:41 INFO  Runner:235 - Runner
+2018-12-06 17:23:41 INFO  Server:372 - jetty-9.4.6.v20170531
+2018-12-06 17:23:43 INFO  AnnotationConfiguration:480 - Scanning elapsed time=1715ms
+2018-12-06 17:23:44 INFO  session:364 - DefaultSessionIdManager workerName=node0
+2018-12-06 17:23:44 INFO  session:369 - No SessionScavenger set, using defaults
+2018-12-06 17:23:44 INFO  session:149 - Scavenging every 600000ms
+2018-12-06 17:23:44 INFO  ContextHandler:788 - Started o.e.j.w.WebAppContext@3567135c{/rentsystem,file:///home/alexandre/skip/rentsystem/src/main/webapp/,AVAILABLE}{file:///home/alexandre/skip/rentsystem/src/main/webapp/}
+2018-12-06 17:23:44 INFO  AbstractConnector:280 - Started ServerConnector@68ceda24{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2018-12-06 17:23:44 INFO  Server:444 - Started @3820ms
+2018-12-06 17:34:09 INFO  log:192 - Logging initialized @734ms to org.eclipse.jetty.util.log.Slf4jLog
+2018-12-06 17:34:09 INFO  Runner:235 - Runner
+2018-12-06 17:34:10 INFO  Server:372 - jetty-9.4.6.v20170531
+2018-12-06 17:34:11 INFO  AnnotationConfiguration:480 - Scanning elapsed time=989ms
+2018-12-06 17:34:12 INFO  session:364 - DefaultSessionIdManager workerName=node0
+2018-12-06 17:34:12 INFO  session:369 - No SessionScavenger set, using defaults
+2018-12-06 17:34:12 INFO  session:149 - Scavenging every 660000ms
+2018-12-06 17:34:12 INFO  ContextHandler:788 - Started o.e.j.w.WebAppContext@3567135c{/rentsystem,file:///home/alexandre/skip/rentsystem/src/main/webapp/,AVAILABLE}{file:///home/alexandre/skip/rentsystem/src/main/webapp/}
+2018-12-06 17:34:13 INFO  AbstractConnector:280 - Started ServerConnector@68ceda24{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2018-12-06 17:34:13 INFO  Server:444 - Started @4791ms
+2018-12-06 17:36:09 INFO  log:192 - Logging initialized @643ms to org.eclipse.jetty.util.log.Slf4jLog
+2018-12-06 17:36:10 INFO  Runner:235 - Runner
+2018-12-06 17:36:10 INFO  Server:372 - jetty-9.4.6.v20170531
+2018-12-06 17:36:13 INFO  AnnotationConfiguration:480 - Scanning elapsed time=2180ms
+2018-12-06 17:36:14 INFO  session:364 - DefaultSessionIdManager workerName=node0
+2018-12-06 17:36:14 INFO  session:369 - No SessionScavenger set, using defaults
+2018-12-06 17:36:14 INFO  session:149 - Scavenging every 660000ms
+2018-12-06 17:36:14 INFO  ContextHandler:788 - Started o.e.j.w.WebAppContext@3567135c{/rentsystem,file:///home/alexandre/skip/rentsystem/src/main/webapp/,AVAILABLE}{file:///home/alexandre/skip/rentsystem/src/main/webapp/}
+2018-12-06 17:36:14 INFO  AbstractConnector:280 - Started ServerConnector@38e64aa1{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2018-12-06 17:36:14 INFO  Server:444 - Started @4952ms

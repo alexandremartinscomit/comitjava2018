@@ -1,0 +1,23 @@
+view:
+signup form
+profile page
+car and user picture
+reset password
+forgot password
+search over the lists (find all by criterias)
+use templates
+header page with logo
+footer page with contact
+contact us
+landing page
+use jquery datepicker
+hero for login page with header
+first and last name for user
+
+service:
+rentOrder: check car is available
+rentOrder: check if the dates are valid
+
+database:
+record historic data of login and orders done
+create table for authorization
